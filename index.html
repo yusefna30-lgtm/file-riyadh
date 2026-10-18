@@ -161,7 +161,7 @@
       flex-wrap: wrap;
     }
 
-    /* قسم استعراض الفيديو الحي المدمج */
+    /* قسم استعراض الفيديو الحي */
     .video-showcase {
       display: flex;
       justify-content: center;
@@ -199,14 +199,6 @@
       font-size: 0.82rem;
       color: var(--muted);
       margin-bottom: 14px;
-    }
-
-    video {
-      width: 100%;
-      max-height: 480px;
-      border-radius: 12px;
-      background: #000;
-      border: 1px solid #2A2A2A;
     }
 
     /* بطاقات التقرير التنفيذي */
@@ -409,7 +401,7 @@
       </div>
     </div>
 
-    <!-- ثانياً: استعراض الفيديو الحي المدمج -->
+    <!-- ثانياً: استعراض الفيديو الحي (يوتيوب شورت) -->
     <div id="videos" class="section-header">
       <h2>ثانياً: العرض المرئي الحي للمنظومة (Live Prototype)</h2>
     </div>
@@ -419,10 +411,16 @@
         <span class="video-step">التجربة الكاملة: من لمسة القماش إلى التوثيق السحابي</span>
         <h3>مسح شريحة الـ NFC وتوثيق الملكية الرقمية</h3>
         <p>استجابة فورية عند ملامسة تطريز السدو، تفتح منظومة تحدي «اكتشف الرياض» وقفل ملكية القطعة سحابياً باسم المشتري[cite: 5, 6]</p>
-        <video controls playsinline preload="metadata">
-          <source src="demo.mp4" type="video/mp4">
-          متصفحك لا يدعم تشغيل الفيديو.
-        </video>
+        
+        <!-- تشغيل يوتيوب شورت مباشرة داخل الصفحة -->
+        <div style="position: relative; width: 100%; padding-top: 177.77%; border-radius: 12px; overflow: hidden; background: #000; border: 1px solid #2A2A2A; margin-top: 10px;">
+          <iframe src="https://www.youtube.com/embed/P4VRqauFvBY" 
+                  title="عزوة - أول تيشيرت ستريت وير تفاعلي بتقنية NFC" 
+                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+          </iframe>
+        </div>
       </div>
     </div>
 
@@ -433,7 +431,7 @@
 
     <div class="report-card">
       <h3>1. الملخص التنفيذي ومفهوم (Phygital Streetwear)</h3>
-      <p>يشهد قطاع الأزياء العالمي تحولاً جذرياً نحو <strong>"الأزياء الهجينة" (Phygital Fashion)</strong> التي تربط المنتج الملموس بالعالم الرقمي. وتأتي علامة <strong>«عِـــزْوَة»</strong> كأول مبادرة سعودية تطبّق هذا المفهوم فعلياً في أزياء الشارع الفاخرة عبر دمج شرائح (NFC) الذكية المرتبطة بمنظومة سحابية تقفل ملكية التيشيرت باسم المشتري وتصدر له بطاقة (VIP) خاصة[cite: 5]، مما يحول القطعة إلى <strong>"أصل ومقتنى شخصي موثق"</strong>.</p>
+      <p>يشهد قطاع الأزياء العالمي تحولاً جذرياً نحو <strong>"الأزياء الهجينة" (Phygital Fashion)</strong> التي تربط المنتج الملموس بالعالم الرقمي. وتأتي علامة <strong>«عِـــزْوَة»</strong> كأول مبادرة سعودية تطبّق هذا المفهوم فعلياً في أزياء الشارع الفاخرة عبر دمج شرائح (NFC) الذكية المرتبطة بمنظومة سحابية تقفل ملكية التيشيرت باسم المشتري وتصدر له بطاقة (VIP) خاصة[cite: 5], مما يحول القطعة إلى <strong>"أصل ومقتنى شخصي موثق"</strong>.</p>
     </div>
 
     <div class="report-card">
