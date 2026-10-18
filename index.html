@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عِـــزْوَة | ملف الشراكة الاستراتيجية والتقرير التنفيذي</title>
+  <style>
+    :root {
+      --bg: #0A0A0A;
+      --card-bg: #141414;
+      --card-border: #26221A;
+      --gold: #D4AF37;
+      --gold-light: #F3E5AB;
+      --maroon: #3D0E14;
+      --text: #F5F5F5;
+      --muted: #A0A0A0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      padding-bottom: 60px;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    /* الهيدر الرئيسي */
+    .hero-header {
+      text-align: center;
+      padding: 40px 20px;
+      background: radial-gradient(circle at top, var(--maroon) 0%, #0F0F0F 75%);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 20px;
+      margin-bottom: 32px;
+      position: relative;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      padding: 4px 16px;
+      border-radius: 24px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .brand-name {
+      font-size: 2.6rem;
+      font-weight: 900;
+      color: var(--gold);
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+    }
+
+    .hero-title {
+      font-size: 1.25rem;
+      color: #FFFFFF;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .hero-sub {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* أزرار التنقل السريع */
+    .quick-nav {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .nav-pill {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--gold-light);
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .nav-pill:hover {
+      background: var(--gold);
+      color: #000;
+    }
+
+    /* عناوين الأقسام */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 36px 0 18px 0;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .section-header h2 {
+      font-size: 1.35rem;
+      color: var(--gold);
+      font-weight: 800;
+    }
+
+    /* قسم الخطاب الرسمي */
+    .letter-card {
+      background: linear-gradient(145deg, #161512 0%, #101010 100%);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 18px;
+      padding: 28px 24px;
+      margin-bottom: 32px;
+    }
+
+    .letter-meta {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.85rem;
+      color: var(--gold-light);
+      border-bottom: 1px dashed #2C261E;
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+
+    .letter-body p {
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+      color: #E8E8E8;
+      text-align: justify;
+    }
+
+    .letter-sign {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px dashed #2C261E;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* قسم استعراض الفيديو الحي المدمج */
+    .video-showcase {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 36px;
+    }
+
+    .video-card {
+      background: var(--card-bg);
+      border: 1px solid var(--gold);
+      border-radius: 18px;
+      padding: 16px;
+      text-align: center;
+      width: 100%;
+      max-width: 440px;
+    }
+
+    .video-step {
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--gold-light);
+      font-size: 0.75rem;
+      padding: 3px 12px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .video-card h3 {
+      font-size: 1rem;
+      color: #FFF;
+      margin-bottom: 6px;
+    }
+
+    .video-card p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    video {
+      width: 100%;
+      max-height: 480px;
+      border-radius: 12px;
+      background: #000;
+      border: 1px solid #2A2A2A;
+    }
+
+    /* بطاقات التقرير التنفيذي */
+    .report-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+
+    .report-card h3 {
+      font-size: 1.1rem;
+      color: var(--gold-light);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .report-card p {
+      font-size: 0.92rem;
+      color: #DDD;
+      margin-bottom: 10px;
+    }
+
+    .journey-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .journey-step {
+      background: #1A1814;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .journey-num {
+      font-size: 0.75rem;
+      color: var(--gold);
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .journey-step h4 {
+      font-size: 0.95rem;
+      color: #FFF;
+      margin-bottom: 6px;
+    }
+
+    .journey-step p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .bullet-list {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    .bullet-list li {
+      font-size: 0.9rem;
+      color: #DDD;
+      margin-bottom: 10px;
+      padding-right: 18px;
+      position: relative;
+    }
+
+    .bullet-list li::before {
+      content: "✦";
+      color: var(--gold);
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    /* قسم التواصل والطباعة */
+    .cta-box {
+      background: linear-gradient(145deg, var(--maroon) 0%, #141414 100%);
+      border: 1px solid var(--gold);
+      border-radius: 18px;
+      padding: 28px 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cta-box h3 {
+      font-size: 1.25rem;
+      color: #FFF;
+      margin-bottom: 8px;
+    }
+
+    .cta-box p {
+      font-size: 0.9rem;
+      color: #CCC;
+      margin-bottom: 20px;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #000;
+      text-decoration: none;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--gold-light);
+      border: 1px solid var(--gold);
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #666;
+      margin-top: 36px;
+    }
+
+    /* إعدادات الطباعة وحفظ الملف كـ PDF */
+    @media print {
+      body { background: #FFF; color: #000; }
+      .quick-nav, .video-showcase, .btn-group { display: none; }
+      .hero-header, .letter-card, .report-card, .cta-box {
+        background: #FFF !important;
+        border: 1px solid #CCC !important;
+        color: #000 !important;
+        break-inside: avoid;
+      }
+      .brand-name, .section-header h2, .report-card h3, .letter-meta { color: #8C6D1F !important; }
+      .letter-body p, .report-card p, .bullet-list li { color: #111 !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- الهيدر -->
+    <div class="hero-header">
+      <span class="badge">ملف الشراكة الاستراتيجية والتقرير التنفيذي ⚡</span>
+      <div class="brand-name">عِـــزْوَة | EZWA</div>
+      <div class="hero-title">أول براند ستريت وير سعودي يبتكر ويدمج تقنية (NFC) وتوثيق الملكية السحابي</div>
+      <p class="hero-sub">حيث تلتقي أصالة المعمار النجدي وتطريز السدو بآفاق الموضة الرقمية التفاعلية (Phygital Fashion)</p>
+    </div>
+
+    <!-- أزرار التنقل السريع -->
+    <div class="quick-nav">
+      <a href="#letter" class="nav-pill">📜 خطاب الشراكة</a>
+      <a href="#videos" class="nav-pill">🎬 العرض المرئي الحي</a>
+      <a href="#report" class="nav-pill">📊 التقرير التنفيذي</a>
+      <a href="#opportunities" class="nav-pill">🤝 مجالات الشراكة</a>
+    </div>
+
+    <!-- أولاً: خطاب الشراكة الرسمي -->
+    <div id="letter" class="section-header">
+      <h2>أولاً: خطاب عرض الشراكة</h2>
+    </div>
+
+    <div class="letter-card">
+      <div class="letter-meta">
+        <span><strong>إلى:</strong> من يهمه الأمر / السادة شركاء النجاح المحترمين</span>
+        <span><strong>الموضوع:</strong> شراكة استراتيجية في أول أزياء تفاعلية بتقنية (NFC) بالمملكة</span>
+      </div>
+      <div class="letter-body">
+        <p><strong>السلام عليكم ورحمة الله وبركاته،،</strong></p>
+        <p>انطلاقاً من الحراك الثقافي والاقتصادي المتسارع الذي تشهده المملكة العربية السعودية، وتماشياً مع مستهدفات رؤية المملكة 2030 في تمكين الصناعات الإبداعية وربط الإرث الوطني بآفاق التقنية الحديثة؛ يسرنا في علامة <strong>«عِـــزْوَة» (EZWA)</strong> أن نضع بين أيديكم فرصة شراكة استراتيجية رائدة في قطاع الأزياء الذكية (Phygital Fashion).</p>
+        <p>تفخر <strong>«عِـــزْوَة»</strong> بكونها <strong>أول علامة أزياء ستريت وير سعودية تبتكر وتدمج تقنية الاتصال قريب المدى (NFC) المقترنة بمنظومة تفاعلية لقفل وتوثيق ملكية القطعة سحابياً باسم المشتري</strong>[cite: 5]. نحن لا نقدم مجرد أزياء فاخرة، بل نحول كل تيشيرت إلى مقتنى شخصي مسجل ووثيقة تاريخية ناطقة؛ حيث تندمج التصاميم المعمارية المستوحاة من معالم المملكة العريقة (مثل قصر المصمك) وتطريز السدو الأصيل مع شرائح ذكية تدمج العميل في تجربة رقمية تبدأ بالتفاعل المعرفي وتنتهي بتوثيق اسمه سحابياً كمالك حصري للقطعة واستخراج بطاقة عضوية (VIP) خاصة به[cite: 5].</p>
+        <p>إننا نتطلع من خلال هذا الخطاب إلى بناء شراكة نوعية مع جهتكم الموقرة، تهدف إلى تعظيم الأثر التسويقي والثقافي والاستثماري لهذا الابتكار القائم والجاهز للتشغيل، وتقديم تجربة غير مسبوقة للمستهلك المحلي والسائح العالمي تجمع بين فخامة الملبس، وعمق القصة، وخصوصية التملك الرقمي.</p>
+      </div>
+      <div class="letter-sign">
+        <div>
+          <strong>مقدمه لكم: مؤسس علامة «عِـــزْوَة» (EZWA)</strong><br>
+          <span style="font-size: 0.85rem; color: var(--muted);">الرياض – المملكة العربية السعودية</span>
+        </div>
+        <div style="color: var(--gold); font-weight: 700; font-size: 0.9rem;">
+          إرثٌ يُرتدى، وتاريخٌ يتصل
+        </div>
+      </div>
+    </div>
+
+    <!-- ثانياً: استعراض الفيديو الحي المدمج -->
+    <div id="videos" class="section-header">
+      <h2>ثانياً: العرض المرئي الحي للمنظومة (Live Prototype)</h2>
+    </div>
+
+    <div class="video-showcase">
+      <div class="video-card">
+        <span class="video-step">التجربة الكاملة: من لمسة القماش إلى التوثيق السحابي</span>
+        <h3>مسح شريحة الـ NFC وتوثيق الملكية الرقمية</h3>
+        <p>استجابة فورية عند ملامسة تطريز السدو، تفتح منظومة تحدي «اكتشف الرياض» وقفل ملكية القطعة سحابياً باسم المشتري[cite: 5, 6]</p>
+        <video controls playsinline preload="metadata">
+          <source src="demo.mp4" type="video/mp4">
+          متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+      </div>
+    </div>
+
+    <!-- ثالثاً: التقرير التنفيذي المفصل -->
+    <div id="report" class="section-header">
+      <h2>ثالثاً: التقرير التنفيذي وجدوى الابتكار</h2>
+    </div>
+
+    <div class="report-card">
+      <h3>1. الملخص التنفيذي ومفهوم (Phygital Streetwear)</h3>
+      <p>يشهد قطاع الأزياء العالمي تحولاً جذرياً نحو <strong>"الأزياء الهجينة" (Phygital Fashion)</strong> التي تربط المنتج الملموس بالعالم الرقمي. وتأتي علامة <strong>«عِـــزْوَة»</strong> كأول مبادرة سعودية تطبّق هذا المفهوم فعلياً في أزياء الشارع الفاخرة عبر دمج شرائح (NFC) الذكية المرتبطة بمنظومة سحابية تقفل ملكية التيشيرت باسم المشتري وتصدر له بطاقة (VIP) خاصة[cite: 5]، مما يحول القطعة إلى <strong>"أصل ومقتنى شخصي موثق"</strong>.</p>
+    </div>
+
+    <div class="report-card">
+      <h3>2. رحلة المستخدم ومنظومة قفل الملكية السحابي (Gamified Cloud System)</h3>
+      <p>ينتقل العميل فور مسح الشريحة المدمجة في التيشيرت عبر رحلة رقمية مشوقة مكونة من 4 مراحل رئيسية:</p>
+      <div class="journey-grid">
+        <div class="journey-step">
+          <div class="journey-num">المرحلة 01</div>
+          <h4>تحدي «اكتشف الرياض»</h4>
+          <p>دمج العميل في تحدٍ معرفي تفاعلي حول المعلم التاريخي (قصر المصمك) لترسيخ القيمة الثقافية والسياحية[cite: 5].</p>
+        </div>
+        <div class="journey-step">
+          <div class="journey-num">المرحلة 02</div>
+          <h4>قفل الملكية السحابي</h4>
+          <p>ربط الرقم التسلسلي للقطعة (مثل EZWA-MSM-0001) باسم المشتري رسمياً وقفلها سحابياً لمنع الانتحال أو التكرار[cite: 5].</p>
+        </div>
+        <div class="journey-step">
+          <div class="journey-num">المرحلة 03</div>
+          <h4>استخراج بطاقة VIP</h4>
+          <p>توليد بطاقة عضوية رقمية خاصة بمالك القطعة تمنحه مزايا حصرية لدى العلامة التجارية وشركائها[cite: 5].</p>
+        </div>
+        <div class="journey-step">
+          <div class="journey-num">المرحلة 04</div>
+          <h4>العرض السينمائي</h4>
+          <p>مشهد بصري مهيب ينطلق بمسار ضوئي ذهبي من قصر المصمك ليرسم شعار العلامة في السماء ويعزز المشاركة الرقمية[cite: 5].</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="report-card">
+      <h3>3. القيمة المضافة والعوائد الاستراتيجية للشركاء</h3>
+      <ul class="bullet-list">
+        <li><strong>بناء قاعدة بيانات موثقة (Verified CRM):</strong> تسجيل الأسماء سحابياً يوفر قاعدة بيانات حقيقية لملاك القطع الفعليين، مما يتيح استهدافهم بعروض مخصصة وقياس ولاء العملاء بدقة.</li>
+        <li><strong>تفعيل برامج الولاء عبر بطاقة الـ VIP:</strong> يتحول التيشيرت نفسه إلى بطاقة دخول شخصية للفعاليات أو للحصول على خصومات حصرية لدى الشركاء (المقاهي المختصة، المعارض، المواسم) بمجرد مسح القطعة[cite: 5].</li>
+        <li><strong>سفير ثقافي وسياحي متنقل:</strong> يدمج التصميم بين القطن الثقيل الفاخر، طباعة الـ DTF الذهبية، وتطريز السدو مع محتوى تاريخي تفاعلي يثري تجربة الزوار والسياح.</li>
+        <li><strong>تجربة العرض المتحفي (Streetwear Gallery):</strong> إمكانية عرض القطع على منصات صخرية أو إطارات متحفية فاخرة مزودة بلوحات تعريفية ذكية داخل مقرات الشركاء دون تكديس البضائع[cite: 1, 2, 5].</li>
+      </ul>
+    </div>
+
+    <div id="opportunities" class="report-card">
+      <h3>4. مجالات الشراكة المقترحة</h3>
+      <ul class="bullet-list">
+        <li><strong>الجهات الثقافية والسياحية والمواسم الوطنية:</strong> رعاية وتطوير تحديات تفاعلية مخصصة لمعالم ومواسم المملكة، وإصدار مجموعات خاصة موثقة بأسماء الزوار والمقتنين[cite: 5].</li>
+        <li><strong>قطاعات الضيافة والمقاهي المختصة ومتاجر اللايف ستايل:</strong> اعتماد بطاقة الـ (VIP) المستخرجة من تيشيرتات «عِـــزْوَة» لمنح مزايا مشتركة، وتخصيص زوايا عرض متحفية للتصاميم داخل مقرات الشركاء[cite: 5].</li>
+        <li><strong>الرعاة والمستثمرون:</strong> الاستثمار في توسيع خطوط الإنتاج الذكية وتطوير البنية التحتية لمنظومة التوثيق السحابي لتشمل إصدارات ومناطق جديدة.</li>
+      </ul>
+    </div>
+
+    <!-- صندوق التواصل وحفظ الـ PDF -->
+    <div class="cta-box">
+      <h3>هل أنتم مستعدون لصناعة مستقبل الأزياء التفاعلية معنا؟</h3>
+      <p>يسعدنا ترتيب اجتماع لاستعراض العينات الحية وتجربة المسح والتوثيق السحابي بشكل مباشر</p>
+      <div class="btn-group">
+        <button class="btn-gold" onclick="window.print()">🖨️ حفظ التقرير كملف PDF / طباعة</button>
+        <a href="https://wa.me/966500000000" target="_blank" class="btn-outline">💬 تواصل مباشر عبر واتساب</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      جميع الحقوق محفوظة لعلامة عِـــزْوَة (EZWA) © — الرياض، المملكة العربية السعودية
+    </div>
+
+  </div>
+
+</body>
+</html>
